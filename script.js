@@ -3,6 +3,7 @@ function loadImage(image) {
     if (!src) {
         return;
     }
+    console.log(`Loading image: ${src}`);
     image.src = src;
 }
 
@@ -21,7 +22,9 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, options);
 
-const images = document.querySelectorAll('img.lazy-load');
-images.forEach(image => {
-    observer.observe(image);
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('img.lazy');
+    images.forEach(image => {
+        observer.observe(image);
+    });
 });
