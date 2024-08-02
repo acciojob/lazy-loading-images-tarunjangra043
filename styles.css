@@ -1,1 +1,7 @@
-/*  your css code here. If applicable */
+/* styles.css */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
